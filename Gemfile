@@ -36,9 +36,7 @@ gem 'pusher'
 group :development, :test do
     gem 'sqlite3'
     end
-group :production do
-  gem 'pg'
-end
+
 
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
