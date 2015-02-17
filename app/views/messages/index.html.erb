@@ -1,0 +1,34 @@
+<h1>Lista de mis notas</h1>
+<%= link_to 'Crear nueva nota', new_message_path %>
+
+<table>
+  <thead>
+    <tr>
+   
+      <th>Nota</th>
+      <th>Movilorigen</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @messages.each do |message| %>
+      <tr>
+        
+        <td><%= message.message %></td>
+        <td><%= message.movilorigen %></td>
+        <td><%= link_to 'Show', message %></td>
+        <td><%= link_to 'Edit', edit_message_path(message) %></td>
+        <td><%= link_to 'Eliminar nota', message, method: :delete, remote: true, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
+
+
